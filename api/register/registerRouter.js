@@ -6,7 +6,6 @@ const db = require('../../data/helpers/auth_models');
 const registerRouter = express.Router();
 
 registerRouter.post('/', async (req, res) => {
-    console.log(req.body);
     const user = req.body;
     const hash = bcrypt.hashSync(user.password, 12);
     user.password = hash;
