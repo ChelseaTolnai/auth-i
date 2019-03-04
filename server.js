@@ -13,7 +13,7 @@ server.use(helmet());
 server.use(cors());
 
 server.use('/api/login', loginRouter);
-server.use('api/register', registerRouter);
-server.use('api/users', usersRouter);
+server.use('/api/register', registerRouter);
+server.use('/api/users', usersRouter);
 
 module.exports = server;
